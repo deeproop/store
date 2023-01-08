@@ -18,7 +18,7 @@ export function CartProvider({children}) {
     // { id: 1, quantity: 2 }
 
     function getProductQuantity(id) {
-        cartProducts.find(product => product.id === id)?.quantity
+        const quantity = cartProducts.find(product => product.id === id)?.quantity
 
         if(quantity === undefined) {
             return 0;
